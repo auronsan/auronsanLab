@@ -39,7 +39,6 @@
              </div>
            </div>
         <div class="row center">
-
           by: Ahsanul Intishor
         </div> <div class="row center">
           <a href="https://www.linkedin.com/in/auronsan">Hire me!</a>
@@ -48,15 +47,15 @@
     </div>
     <div class="parallax"><img src="https://firebasestorage.googleapis.com/v0/b/auronsanlab.appspot.com/o/background3.jpg?alt=media&token=c19e647b-3169-4a2c-b8eb-ced90f99362c" alt="Unsplashed background img 1"></div>
   </div>
-  <div class="container" style=>
+  <div class="container">
   <div class="section">
-  <div class="progress" ng-hide="$rootScope.loaded">
+  <div class="progress" ng-hide="$rootScope.loaded"> <!--display loading bar-->
      <div class="indeterminate" ></div>
  </div>
  </div>
  <div class="row" style="background-color:white;">
  <div class="col s12 l8">
-  <div id="posts1" class="col s12" style="padding-left: 5px;" ng-view></div>
+  <div id="posts1" class="col s12" style="padding-left: 5px;" ng-view></div> <!--ngview for display my post-->
   </div>
 <div class="col s12 l4 right" >
     <div class="section" >
@@ -70,19 +69,16 @@
 </div>
 <div class="container">
   <div class="section">
-
     <!--   Icon Section   -->
     <div class="row">
       <div class="col s4">
         <div class="icon-block"><a href="https://github.com/auronsan">
           <h2 class="center brown-text"><i class="fa fa-github-alt" aria-hidden="true"></i></h2>
           <h6 class="center">Playground Source code</h6>
-
           <p class="light"></p>
         </a>
         </div>
       </div>
-
       <div class="col s4">
         <div class="icon-block"><a href="https://www.linkedin.com/in/auronsan">
           <h2 class="center brown-text"><i class="fa fa-linkedin-square" aria-hidden="true"></i></h2>
@@ -90,7 +86,6 @@
             </a>
         </div>
       </div>
-
       <div class="col s4">
         <div class="icon-block"><a href="mailto:auronsanjr@gmail.com">
           <h2 class="center brown-text">
@@ -101,7 +96,6 @@
 
       </div>
     </div>
-
   </div>
 </div>
 <div class="parallax-container">
@@ -114,13 +108,10 @@
       </div>
       <div class="row center">
       </div> <div class="row center">
-
       </div>
       <br><br>
-
     </div>
   </div>
-
     <div class="parallax"><img src="https://forests.gujarat.gov.in/writereaddata/images/forest-area-banner.jpg"></div>
   </div>
 
@@ -132,8 +123,6 @@
 
           <h5 class="white-text">My bio</h5>
           <p class="grey-text text-lighten-4">Want to become Expert Developer!</p>
-
-
         </div>
     </div>
     <div class="footer-copyright">
@@ -148,7 +137,8 @@
   <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
   <script src="https://firebasestorage.googleapis.com/v0/b/auronsanlab.appspot.com/o/js%2Finit.js?alt=media&token=5832f480-f704-46f6-9d22-3745f666b741"></script>
-<script>
+<!-- main script angular -->
+<script> 
 var app = angular.module('myApp', ['ngRoute','ngSanitize']);
 app.config(function($routeProvider) {
 		$routeProvider
