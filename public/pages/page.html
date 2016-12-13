@@ -1,0 +1,6 @@
+<div class="row s12" ng-model-options="{ updateOn: 'default blur', debounce: { 'default': 500, 'blur': 0 } }">
+  <div class=title ><b>{{data.title.rendered}}</b> {{ data.date | date:dateFormat}} </div>
+<div class="row  s12" >
+  <div class="col s12" ng-bind-html="data.content.rendered"></div>
+</div>
+</div>

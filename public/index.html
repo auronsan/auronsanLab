@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+  <title>Auronsan Playground</title>
+<link rel="shortcut icon" href="https://firebasestorage.googleapis.com/v0/b/auronsanlab.appspot.com/o/favicon%20(1).ico?alt=media&token=7d9068d0-71dc-4f90-8baf-12cf89b50094" type="image/x-icon"/>
+  <!-- CSS  -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   <!-- Compiled gand minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.5.9/angular-sanitize.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular-route.min.js"></script>
+  <link href="https://kuboseinz.co/test2/auronsanlab/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+</head>
+<body ng-controller="myCtrl" style="background-color:#e8eaed;">
+  <nav class="white" role="navigation">
+    <div class="nav-wrapper center">
+     <div class="col s12"><a id="logo-container" href="#" class="brand-logo center">AuronsanLab</a>
+     </div>
+   </div>
+     </div>
+  </nav>
+
+  <div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <br><br>
+        <h4 class="header center teal-text text-lighten-2">Today is Better than Yesterday!</h4>
+        <div class="row center">
+          <h5 class="header col s12 light">My Playground blog</h5>
+        </div>
+        <div class="row center">
+             <div class="collection-item avatar col s12">
+       <img src="https://en.gravatar.com/userimage/30281817/dcf7e8b027c394bb003ab0ef8636c69c.jpg" alt="" class="circle">
+             </div>
+           </div>
+        <div class="row center">
+
+          by: Ahsanul Intishor
+        </div> <div class="row center">
+          <a href="https://www.linkedin.com/in/auronsan">Hire me!</a>
+        </div>
+      </div>
+    </div>
+    <div class="parallax"><img src="https://firebasestorage.googleapis.com/v0/b/auronsanlab.appspot.com/o/background3.jpg?alt=media&token=c19e647b-3169-4a2c-b8eb-ced90f99362c" alt="Unsplashed background img 1"></div>
+  </div>
+  <div class="container" style=>
+  <div class="section">
+  <div class="progress" ng-hide="$rootScope.loaded">
+     <div class="indeterminate" ></div>
+ </div>
+ </div>
+ <div class="row" style="background-color:white;">
+ <div class="col s12 l8">
+  <div id="posts1" class="col s12" style="padding-left: 5px;" ng-view></div>
+  </div>
+<div class="col s12 l4 right" >
+    <div class="section" >
+    <h5>Recent</h5>
+    <div id="post" ng-repeat="data in datas">
+    {{ data.date | date : short}}<div class=title ><a id="posts2" ng-href="#{{data.id}}" onclick="$('html, body').animate({scrollTop: 0}, 2000);">{{data.title.rendered}}</a><!-- <span class="right">{{ data.date | date : short}} </span>--></div><br>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+<div class="container">
+  <div class="section">
+
+    <!--   Icon Section   -->
+    <div class="row">
+      <div class="col s4">
+        <div class="icon-block"><a href="https://github.com/auronsan">
+          <h2 class="center brown-text"><i class="fa fa-github-alt" aria-hidden="true"></i></h2>
+          <h6 class="center">Playground Source code</h6>
+
+          <p class="light"></p>
+        </a>
+        </div>
+      </div>
+
+      <div class="col s4">
+        <div class="icon-block"><a href="https://www.linkedin.com/in/auronsan">
+          <h2 class="center brown-text"><i class="fa fa-linkedin-square" aria-hidden="true"></i></h2>
+          <h6 class="center">Professional Network</h6>
+            </a>
+        </div>
+      </div>
+
+      <div class="col s4">
+        <div class="icon-block"><a href="mailto:auronsanjr@gmail.com">
+          <h2 class="center brown-text">
+            <i class="fa fa-google" aria-hidden="true"></i></h2>
+          <h6 class="center">Gmail</h6>
+            </a>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+<div class="parallax-container">
+  <div class="section no-pad-bot">
+    <div class="container">
+      <br><br>
+      <h4 class="header center teal-text text-lighten-2">Green!</h4>
+      <div class="row center">
+        <h5 class="header col s12 light"></h5>
+      </div>
+      <div class="row center">
+      </div> <div class="row center">
+
+      </div>
+      <br><br>
+
+    </div>
+  </div>
+
+    <div class="parallax"><img src="https://forests.gujarat.gov.in/writereaddata/images/forest-area-banner.jpg"></div>
+  </div>
+
+
+<footer class="page-footer teal">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+
+          <h5 class="white-text">My bio</h5>
+          <p class="grey-text text-lighten-4">Want to become Expert Developer!</p>
+
+
+        </div>
+    </div>
+    <div class="footer-copyright">
+       <div></div>Made by Ahsanul Intishor aka @auronsan
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+  <script src="https://firebasestorage.googleapis.com/v0/b/auronsanlab.appspot.com/o/js%2Finit.js?alt=media&token=5832f480-f704-46f6-9d22-3745f666b741"></script>
+<script>
+var app = angular.module('myApp', ['ngRoute','ngSanitize']);
+app.config(function($routeProvider) {
+		$routeProvider
+
+
+			.when('/:id', {
+				templateUrl : 'pages/page.html',
+        controller : 'AppCtrl'
+      })
+  .otherwise({
+      template : "<h4>Welcome to my blog</h4><h5>Just click link on recent list to read my blog Happy coding!</h5> <p>Just simple blog for my playground to coding. if have something can ask me directly via gmail : auronsanjr@gmail.com.</p>"
+			});
+	});
+app.controller('myCtrl', function($scope, $http, $rootScope) {
+    $http.get("https://www.kuboseinz.co/auronsanlab/wp-json/wp/v2/posts")
+    .then(function(response) {
+        //console.log(response.data);
+        $scope.datas=response.data;
+        $rootScope.datas=response.data;
+        $rootScope.loaded=true;
+        $('.progress').hide();
+    });
+});
+app.controller('AppCtrl', function($scope, $http,$routeParams, $rootScope,$filter,$timeout) {
+$('.progress').show();
+$timeout(function(){if($rootScope.loaded==true){
+$('.progress').hide();
+var self = this;
+$scope.id = $routeParams.id;
+$scope.data1 = $rootScope.datas.filter(function (data) {
+  return (data.id == $scope.id);
+});
+$scope.data=  $scope.data1[0];
+//console.log($scope.data);
+}}, 3000);
+
+});
+function callAtTimeout() {
+    //console.log("Timeout occurred");
+}
+
+jQuery(document).ready(function($) {
+$(".scroll").click(function(event){
+    event.preventDefault();
+    $('html,body').animate({scrollTop:$(this.hash).offset().top}, 1500);
+});
+});
+</script>
+  </body>
+</html>
